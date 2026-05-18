@@ -137,6 +137,7 @@ header {
 }
 
 .profile_card:hover {
+    transition: 0.5s;
     transform: translateY(-5px); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
