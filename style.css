@@ -129,7 +129,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Карточки сами подстроятся под размер экрана */
     gap: 20px;
-    margin-top: 25px;
+
 }
 
 .profile_card {
@@ -163,12 +163,6 @@ header {
 .ben{
     margin-left: 43%;
 }
-.ben_txt{
-    text-align: center; 
-    width: 1000px;
-    margin-left: 250px;
-}
-
 
 .blog-post {
     background: #ffffff;
