@@ -1,0 +1,286 @@
+/* Сброс стилей и подключение шрифта Lato */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Меню навигации */
+header {
+    background-color: #2c3e50;
+    padding: 15px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    color: #1abc9c;
+}
+
+/* Сетка: контент + сайдбар справа */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.content {
+    flex: 3;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+    flex: 1;
+    background: #eef2f3;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.img{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.links{
+    margin-bottom: 20px;
+}
+
+.başlık{
+    color: #2c3e50;
+}
+
+.img1{
+    width: 250px;
+    flex: 1;               /* Заставляет все картинки делиться местом поровну */
+    height: 200px;         /* Задаем им ОДИНАКОВУЮ высоту */
+    object-fit: cover;     /* Самое важное! Картинка подстроится под размер и не сожмется уродливо */
+    border-radius: 6px;
+}
+
+
+.education-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.education-text {
+    flex: 2;
+    width: 700px;
+}
+
+.certificate-img {
+    flex: 1;
+}
+
+.certificate-img img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Легкая тень, чтобы сертификат выделялся */
+    transition: transform 0.3s;
+}
+
+/* Эффект при наведении — картинка чуть увеличится */
+.certificate-img img:hover {
+    transform: scale(1.05);
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 600px) {
+    .education-block {
+        flex-direction: column;
+    }
+}   
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.cards_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Карточки сами подстроятся под размер экрана */
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.profile_card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; /* Чтобы картинка не вылезала за скругленные края */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Мягкая красивая тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile_card:hover {
+    transform: translateY(-5px); /* Карточка изящно приподнимается */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.profile_card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.profile_card p {
+    width: 250px;
+    padding: 15px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.ben{
+    margin-left: 43%;
+}
+.ben_txt{
+    text-align: center; 
+    width: 1000px;
+    margin-left: 250px;
+}
+
+
+.blog-post {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px; /* Отступ между постами */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 5px solid #2c3e50; /* Красивая цветная полоска слева */
+}
+
+
+.blog-post h2 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+
+.blog-post .date {
+    font-size: 12px;
+    color: #95a5a6;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+
+.blog-post p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.blog-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: 200px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+
+.gallery-item img:hover {
+    transform: scale(1.08); 
+}
+
+/* Стиль для самой формы */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; /* Чтобы форма не растягивалась на весь экран */
+    margin-top: 20px;
+}
+
+/* Названия полей */
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+/* Поля ввода и текстовая область */
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif; /* Помним про шрифт из задания */
+    font-size: 14px;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    background-color: #2c3e50; /* Цвет под твою шапку сайта */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.submit-btn:hover {
+    background-color: #34495e;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 40px;
+}
