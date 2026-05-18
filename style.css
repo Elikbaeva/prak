@@ -1,4 +1,4 @@
-/* Сброс стилей и подключение шрифта Lato */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Меню навигации */
 header {
     background-color: #2c3e50;
     padding: 15px;
@@ -35,7 +34,6 @@ header {
     color: #1abc9c;
 }
 
-/* Сетка: контент + сайдбар справа */
 .container {
     display: flex;
     max-width: 1200px;
@@ -77,10 +75,9 @@ header {
 
 .img1{
     width: 250px;
-    flex: 1;               /* Заставляет все картинки делиться местом поровну */
-    height: 200px;         /* Задаем им ОДИНАКОВУЮ высоту */
-    object-fit: cover;     /* Самое важное! Картинка подстроится под размер и не сожмется уродливо */
-    border-radius: 6px;
+    flex: 1;               
+    height: 200px;         
+    object-fit: cover;     
 }
 
 
@@ -103,16 +100,16 @@ header {
 .certificate-img img {
     width: 100%;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Легкая тень, чтобы сертификат выделялся */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
 
-/* Эффект при наведении — картинка чуть увеличится */
+
 .certificate-img img:hover {
     transform: scale(1.05);
 }
 
-/* Адаптивность для мобилок */
+
 @media (max-width: 600px) {
     .education-block {
         flex-direction: column;
@@ -135,13 +132,12 @@ header {
 .profile_card {
     background: #ffffff;
     border-radius: 10px;
-    overflow: hidden; /* Чтобы картинка не вылезала за скругленные края */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Мягкая красивая тень */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
 }
 
 .profile_card:hover {
-    transform: translateY(-5px); /* Карточка изящно приподнимается */
+    transform: translateY(-5px); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -168,12 +164,11 @@ header {
     background: #ffffff;
     padding: 25px;
     border-radius: 8px;
-    margin-bottom: 25px; /* Отступ между постами */
+    margin-bottom: 25px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-left: 5px solid #2c3e50; /* Красивая цветная полоска слева */
+    border-left: 5px solid #2c3e50; 
+
 }
-
-
 .blog-post h2 {
     color: #2c3e50;
     font-size: 22px;
@@ -227,15 +222,14 @@ header {
     transform: scale(1.08); 
 }
 
-/* Стиль для самой формы */
 .contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 500px; /* Чтобы форма не растягивалась на весь экран */
+    max-width: 500px; 
     margin-top: 20px;
 }
 
-/* Названия полей */
+
 .contact-form label {
     margin-bottom: 5px;
     font-weight: bold;
@@ -243,20 +237,20 @@ header {
     font-size: 14px;
 }
 
-/* Поля ввода и текстовая область */
+
 .contact-form input, 
 .contact-form textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-family: 'Lato', sans-serif; /* Помним про шрифт из задания */
+    font-family: 'Lato', sans-serif; 
     font-size: 14px;
 }
 
-/* Кнопка отправки */
+
 .submit-btn {
-    background-color: #2c3e50; /* Цвет под твою шапку сайта */
+    background-color: #2c3e50; 
     color: white;
     padding: 12px;
     border: none;
@@ -266,15 +260,51 @@ header {
     transition: background 0.3s ease;
 }
 
-/* Эффект при наведении на кнопку */
+
 .submit-btn:hover {
     background-color: #34495e;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #2c3e50;
-    color: white;
+    background-color: #2c3e50; 
+    padding: 20px 0;
     margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1100px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-left p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .footer-links a {
+        margin: 0 7px;
+    }
 }
